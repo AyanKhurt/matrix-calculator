@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Enter Your Table Number">
+    <input type="text" id="input2" placeholder="Enter How Many Times to Multiply">
+    <button onclick="Table()">Done</button>
+    <h1>Multiplication Table:</h1>
+    <p id="result"></p>
+
+    <script>
+        function Table() {
+            let userInput1 = parseFloat(document.getElementById('input1').value);
+            let userInput2 = parseFloat(document.getElementById('input2').value);
+
+            let result = "";
+
+            for(let i = 1; i <= userInput2; i++){
+                result += `${userInput1} x ${i} = ${userInput1 * i}<br>`
+            }
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
